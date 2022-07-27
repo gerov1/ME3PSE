@@ -627,12 +627,21 @@ namespace ME3Server_WV
             SslStream targetstream = null;
             if (isMITM)
             {
-                target = new TcpClient(Config.FindEntry("TargetIP"), 14219);
-                Logger.Log("[Main Server Handler " + player.ID + "] Connected to target", Color.Blue);
-                targetstream = new SslStream(target.GetStream(), true, new RemoteCertificateValidationCallback(ValidateAlways), null);
-                Logger.Log("[Main Server Handler " + player.ID + "] Established SSL", Color.Blue);
-                targetstream.AuthenticateAsClient("383933-gosprapp396.ea.com");
-                Logger.Log("[Main Server Handler " + player.ID + "] Authenticated as client", Color.Blue);
+                try
+                {
+                    target = new TcpClient(Config.FindEntry("TargetIP"), 10025);
+                    Logger.Log("[Main Server Handler " + player.ID + "][MITM step 1/3] Connected to target", Color.Blue);
+                    targetstream = new SslStream(target.GetStream(), true, new RemoteCertificateValidationCallback(ValidateAlways), null);
+                    Logger.Log("[Main Server Handler " + player.ID + "][MITM step 2/3] Established SSL", Color.Blue);
+                    X509Certificate2Collection xc = new X509Certificate2Collection();
+                    targetstream.AuthenticateAsClient("gsprodblapp-02.ea.com", xc, SslProtocols.Ssl3, false);
+                    Logger.Log("[Main Server Handler " + player.ID + "][MITM step 3/3] Authenticated as client", Color.Blue);
+                }
+                catch (Exception e)
+                {
+                    Logger.Log("[Main Server Handler " + player.ID + "][MITM] Error:\n" + GetExceptionMessage(e), Color.Red);
+                    return;
+                }
             }
             try
             {
