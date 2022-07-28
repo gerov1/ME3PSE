@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ME3PlayerDataEditor
+</name>
+</assembly>
+<members>
+<member name="T:ME3PlayerDataEditor.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ME3PlayerDataEditor.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ME3PlayerDataEditor.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:ME3PlayerDataEditor.PlayerProfile.ME3PlayerClass.ToString">
+ <summary>
+ Returns the full class line, including its proper number according to the class name. Ex: class1=20;4;Adept;20;10500000.0000;10
+ </summary>
+</member>
+</members>
+</doc>

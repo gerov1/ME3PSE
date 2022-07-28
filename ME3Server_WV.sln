@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1972
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME3Server_WV", "ME3Server_WV\ME3Server_WV.csproj", "{9D06055F-6D7F-4B99-8E20-92D82C3F5715}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketViewer", "PacketViewer\PacketViewer.csproj", "{AC224501-7783-47ED-92F1-065CB19E16F8}"
@@ -10,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setup", "Setup\Setup.csproj", "{30A4F964-9B74-4421-B72B-221A18FBACE9}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ME3PlayerDataEditor", "ME3PlayerDataEditor\ME3PlayerDataEditor.vbproj", "{1471FF11-4703-467A-8F63-9B01FE6B2CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{F03C229C-EF8E-4006-9B48-B98FD9E16B43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{2240D61F-A4FE-4873-83DA-3301722D4EF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE70EAB5-A3DD-4BE6-8EB7-7F426DDDB2B2}
 	EndGlobalSection
 EndGlobal
